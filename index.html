@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jawa Bike Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🏍️ Jawa Bike Store</h1>
+    <p>Order your dream Jawa sports bike online!</p>
+  </header>
+
+  <!-- Product Section -->
+  <section class="products">
+    <!-- Jawa 42 -->
+    <div class="product-card">
+      <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/131937/42-bobber-right-side-view-4.jpeg?isig=0&q=80">
+      <h3>Jawa 42</h3>
+      <p>Powerful 293cc engine with retro-modern design.</p>
+      <p class="price">₹ 1,95,000</p>
+      <button onclick="orderProduct('Jawa 42', '195000')">Order Now</button>
+    </div>
+
+    <!-- Jawa Perak -->
+    <div class="product-card">
+      <img src="https://lh5.googleusercontent.com/proxy/ts0khhAFBDbGXn5BfE4-CTy3s23PhHDL5-7zU1hiCLE01Gb0-mazx9n_022THLFq3MtKlsnxF3OJcdM-_-v4A6TmeQV-2YagkXtQzzz3J1ALa0vqyg" alt="Jawa Perak">
+      <h3>Jawa Perak</h3>
+      <p>Dark, bold & bobber-styled 334cc beast.</p>
+      <p class="price">₹ 2,15,000</p>
+      <button onclick="orderProduct('Jawa Perak', '215000')">Order Now</button>
+    </div>
+
+    <!-- Jawa Standard -->
+    <div class="product-card">
+      <img src="https://cdn.bikedekho.com/processedimages/jawa-motorcycles/jawa-perak/source/jawa-perak66165a505a3a0.jpg" alt="Jawa Standard">
+      <h3>Jawa Standard</h3>
+      <p>Classic look with a reliable 293cc engine.</p>
+      <p class="price">₹ 1,83,000</p>
+      <button onclick="orderProduct('Jawa Standard', '183000')">Order Now</button>
+    </div>
+  </section>
+
+  <!-- Order Modal -->
+  <div id="orderModal" class="order-modal">
+    <div class="order-box">
+      <span class="close-btn" onclick="closeOrder()">&times;</span>
+      <h2>Order Summary</h2>
+      <p><strong>Product:</strong> <span id="orderProduct"></span></p>
+      <p><strong>Price:</strong> ₹<span id="orderPrice"></span></p>
+      <label>Enter Delivery Address:</label><br>
+      <textarea placeholder="Your Address..." rows="3"></textarea><br><br>
+      <button onclick="alert('✅ Order Placed Successfully!')">Confirm Order</button>
+      <button onclick="closeOrder()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
